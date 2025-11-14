@@ -1,8 +1,8 @@
 ---
-title: 'EspecialistBot: Asistente IA 24/7 para contratar servicios'
+title: 'EspecialiBot: Asistente IA 24/7 para contratar servicios'
 publishDate: '14 nov 2025'
 description: 'Lanzamiento de EspecialistBot: asistente inteligente disponible 24/7 en Portal de Especialistas para contratar servicios profesionales.'
-tags: ['especialistbot', 'portal de especialistas', 'ia', 'automatización', 'servicios']
+tags: ['especialibot', 'portal de especialistas', 'ia', 'automatización', 'servicios']
 ---
 
 ## Hoy lanzamos EspecialiBot
