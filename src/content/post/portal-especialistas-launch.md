@@ -59,4 +59,4 @@ Estamos apenas comenzando, y los mejores días están por venir. La forma en que
 ## ¿Listo para descubrirlo?
 
 - Explora [Portal de Especialistas](https://www.portaldeespecialistas.com)
-- Lanza sesión con [EspecialiBot](https://www.portaldeespecialistas.com/especialibot)
+- Chatea con [EspecialiBot](https://www.portaldeespecialistas.com/especialibot)
