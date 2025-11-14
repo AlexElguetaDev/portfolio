@@ -2,6 +2,7 @@
 title: 'Mi Experiencia en Lolocar | Proximo Blog'
 description: 'Fullstack Developer | Mi Experiencia despues de un año en lolocar'
 publishDate: '29 April 2024'
+draft: true
 coverImage:
   src: './coversoon.png'
   alt: 'Soon'

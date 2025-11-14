@@ -1,23 +1,37 @@
 ---
-import PageLayout from '../layouts/BaseLayout.astro'
-import Section from '../components/Section.astro'
-import Card from '../components/Card.astro'
-import Label from '../components/Label.astro'
-import SkillLayout from '../components/SkillLayout.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
+import PostPreview from "@/components/blog/PostPreview.astro";
+import { getAllPosts, sortMDByDate } from "@/utils";
+import Card from "../components/Card.astro";
+import Label from "../components/Label.astro";
+import Section from "../components/Section.astro";
+import SkillLayout from "../components/SkillLayout.astro";
+import PageLayout from "../layouts/BaseLayout.astro";
 
-import { getAllPosts, sortMDByDate } from '@/utils'
+const languages = ["JavaScript", "TypeScript", "PHP", "C++"];
+const frontend = [
+	"HTML",
+	"CSS",
+	"NextJs",
+	"React",
+	"Vue",
+	"Astro",
+	"TailwindCss",
+];
+const backend = ["Node.js", "Express.js", "Ruby on Rails"];
+const databases = ["MongoDB", "PostgreSQL", "MySQL", "SQLite", "Turso"];
+const others = [
+	"GraphQL",
+	"CI/CD",
+	"Cypress",
+	"StoryBook",
+	"Docker",
+	"Google Cloud",
+];
+const mobile = ["React Native"];
 
-const languages = ['JavaScript', 'TypeScript', 'PHP', 'C++']
-const frontend = ['HTML', 'CSS', 'NextJs', 'React', 'Vue', 'Astro', 'TailwindCss']
-const backend = ['Node.js', 'Express.js', 'Ruby on Rails']
-const databases = ['MongoDB', 'PostgreSQL', 'MySQL', 'SQLite', 'Turso']
-const others = ['GraphQL', 'CI/CD', 'Cypress', 'StoryBook', 'Docker', 'Google Cloud']
-const mobile = ['React Native']
-
-const MAX_POSTS = 3
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+const MAX_POSTS = 3;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
@@ -76,11 +90,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				👋 ¡Hola! Soy Alex, un Ingeniero de Software apasionado de 27 años en Chile. Me encanta
-				programar y explorar lenguajes como Rust. Fuera del trabajo, disfruto tiempo de calidad con
-				mi familia. Creo en el equilibrio entre trabajo y vida personal, valorando momentos
-				compartidos con seres queridos. Disfruto tanto el trabajo en equipo como proyectos
-				individuales desafiantes.
+				👋 ¡Hola! Soy Alex, Ingeniero de Software de 27 años en Chile. Como CTO y cofundador, lidero el desarrollo de soluciones innovadoras que transforman cómo los especialistas conectan con clientes. Responsable de la arquitectura técnica, selección de tecnologías y gestión del equipo. Me apasiona programar, explorar Rust y crear plataformas escalables. Fuera del trabajo, valoro el equilibrio con mi familia y disfruto tanto del trabajo en equipo como de proyectos desafiantes.
 			</p>
 		</Section>
 		{
@@ -98,6 +108,34 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		}
 
 		<Section title='Experience'>
+			<Card
+				heading='Portal de Especialistas'
+				subheading='CTO & Co-Founder'
+				date='Feb 2025 - Actualidad'
+				imagePath='/src/assets/portal.png'
+				altText='Portal de Especialistas'
+				imageClass='h-12 rounded-full w-auto md:-left-16'
+			>
+				<ul class='ml-4 list-disc text-muted-foreground'>
+					<li>
+						Lidero el desarrollo y la implementación de
+						estrategias tecnológicas para nuestra plataforma.
+
+						<li>
+							Trabajo en estrecha colaboración con el equipo para diseñar una arquitectura de
+							sistema escalable y eficiente.
+						</li>
+						<li>
+							He sido fundamental en la selección de tecnologías y herramientas adecuadas para
+							nuestro stack tecnológico.
+						</li>
+						<li>
+							Además, participo activamente en el desarrollo de funcionalidades clave y en la
+							optimización del rendimiento de la aplicación.
+						</li>
+					</li>
+				</ul>
+			</Card>
 			<Card
 				heading='Lolocar'
 				subheading='Software Engineer'
@@ -189,6 +227,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					</li>
 				</ul>
 			</Card>
+			
 		</Section>
 
 		<Section title='Education'>

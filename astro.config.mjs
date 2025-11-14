@@ -1,27 +1,25 @@
-import { defineConfig } from 'astro/config'
-import mdx from '@astrojs/mdx'
-import tailwind from '@astrojs/tailwind'
-import sitemap from '@astrojs/sitemap'
-import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
-import remarkUnwrapImages from 'remark-unwrap-images'
-import rehypeExternalLinks from 'rehype-external-links'
-import expressiveCode from 'astro-expressive-code'
-import { expressiveCodeOptions } from './src/site.config'
-import icon from 'astro-icon'
-
-import vercel from '@astrojs/vercel/serverless'
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import expressiveCode from "astro-expressive-code";
+import icon from "astro-icon";
+import rehypeExternalLinks from "rehype-external-links";
+import remarkUnwrapImages from "remark-unwrap-images";
+import { expressiveCodeOptions } from "./src/site.config";
+import { remarkReadingTime } from "./src/utils/remarkReadingTime.ts";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://www.alexelgueta.dev/',
+	site: "https://www.alexelgueta.me/",
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
-			applyBaseStyles: false
+			applyBaseStyles: false,
 		}),
 		sitemap(),
 		mdx(),
-		icon()
+		icon(),
 	],
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
@@ -29,20 +27,20 @@ export default defineConfig({
 			[
 				rehypeExternalLinks,
 				{
-					target: '_blank',
-					rel: ['nofollow, noopener, noreferrer']
-				}
-			]
+					target: "_blank",
+					rel: ["nofollow, noopener, noreferrer"],
+				},
+			],
 		],
 		remarkRehype: {
 			footnoteLabelProperties: {
-				className: ['']
-			}
-		}
+				className: [""],
+			},
+		},
 	},
 	prefetch: true,
-	output: 'server',
-	adapter: vercel({
-		webAnalytics: { enabled: true }
-	})
-})
+	output: "static",
+	// adapter: vercel({
+	// 	webAnalytics: { enabled: true }
+	// })
+});

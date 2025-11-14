@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets'
-import type { ImageMetadata } from 'astro'
-import { cn } from '@/utils'
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { cn } from "@/utils";
 
 const {
-	as: Tag = 'div',
+	as: Tag = "div",
 	class: className,
 	href,
 	heading,
@@ -12,13 +12,17 @@ const {
 	date,
 	imagePath,
 	altText,
-	imageClass
-} = Astro.props
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
+	imageClass,
+} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpeg,jpg,png,gif}",
+);
 
 if (imagePath) {
 	if (!images[imagePath])
-		throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+		throw new Error(
+			`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+		);
 }
 ---
 
@@ -35,7 +39,7 @@ if (imagePath) {
 			<Image
 				src={images[imagePath]()}
 				alt={altText}
-				class={cn('mb-3 md:absolute md:mb-0', imageClass)}
+				class={cn('mb-3 md:absolute md:mb-0 bg-slate-300', imageClass)}
 				loading='eager'
 			/>
 		)
