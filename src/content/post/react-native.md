@@ -1,8 +1,8 @@
 ---
-title: 'React Native: Un Relato de Desafíos y Emoción'
+title: 'Aprender React Native: Desafíos y experiencias prácticas'
 publishDate: '17 jun 2023'
-description: 'Descubre los altibajos de mi viaje aprendiendo React Native, desde emocionantes avances hasta desafíos intimidantes.'
-tags: ['React Native', 'Mobile', 'Experiencia']
+description: 'Mi experiencia aprendiendo React Native: desafíos con Redux, componentes, navegación y cómo superé los obstáculos del desarrollo mobile.'
+tags: ['react native', 'mobile', 'redux', 'desarrollo', 'experiencia']
 ---
 
 ## Embarcándome en la Aventura de React Native

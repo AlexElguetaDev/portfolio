@@ -1,8 +1,8 @@
 ---
-title: 'Por qué dejé de usar editores de código con IA'
+title: 'Por qué dejé de usar IA en editores de código'
 publishDate: '6 apr 2025'
-description: 'Elegí hacer del uso de la IA una acción manual y no parte de mi flujo automático, porque sentí que mi competencia como desarrollador comenzó a caer lentamente.'
-tags: ['IA', 'Desarrollo', 'Reflexión']
+description: 'Reflexión sobre dejar GitHub Copilot y AIEditors. Cómo la dependencia de IA afectó mis habilidades como desarrollador fullstack.'
+tags: ['ia', 'github copilot', 'desarrollo', 'typescript', 'javascript']
 ---
 
 ## TL;DR
